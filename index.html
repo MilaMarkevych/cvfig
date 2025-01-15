@@ -280,9 +280,9 @@
 
         // Add delta only if both cf1 and cf2 are selected
         if (activeLines.has('cv_cf1') && activeLines.has('cv_cf2')) {
-            const techEffect = (yearData.cv_cf1 - yearData.cv_cf2)/( yearData.cv_pred-yearData.cv_cf2) - 1;
+            const techEffect = ((yearData.cv_cf1 - yearData.cv_cf2)/( yearData.cv_pred-yearData.cv_cf2) - 1)*100;
             tooltipContent += `<br/>`; // Add space
-            tooltipContent += `Δ Tech Change Effect (%): ${techEffect.toFixed(4)}`;
+            tooltipContent += `Δ Tech Change Effect (%): ${techEffect.toFixed(0)}`;
         }
 
         tooltip
